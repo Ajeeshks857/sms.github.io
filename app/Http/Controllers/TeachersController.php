@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
 use App\Models\Student;
 use App\Models\Teacher;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
@@ -13,21 +13,27 @@ class TeachersController extends Controller
     public function index(Request $request)
     {
         $teachers = Teacher::getTeachers();
-        $totalStudents= Student::count();        
-        $totalTeachers= Teacher::count();        
-        $totalUsers= User::count();   
-        return view('backend.teacher.index', compact('teachers','totalStudents','totalTeachers','totalUsers'));
+        $totalStudents = Student::count();
+        $totalTeachers = Teacher::count();
+        $totalUsers = User::count();
+        return view('backend.teacher.index', compact('teachers', 'totalStudents', 'totalTeachers', 'totalUsers'));
     }
 
     public function addNew(Request $request)
     {
-        return view('backend.teacher._add');
+        $totalStudents = Student::count();
+        $totalTeachers = Teacher::count();
+        $totalUsers = User::count();
+        return view('backend.teacher._add', compact('totalStudents', 'totalTeachers', 'totalUsers'));
     }
 
     public function edit(Request $request, $id)
     {
+        $totalStudents = Student::count();
+        $totalTeachers = Teacher::count();
+        $totalUsers = User::count();
         $teacher = Teacher::getTeacher($id);
-        return view('backend.teacher._edit', compact('teacher'));
+        return view('backend.teacher._edit', compact('teacher', 'totalStudents', 'totalTeachers', 'totalUsers'));
     }
 
     public function create(Request $request)
