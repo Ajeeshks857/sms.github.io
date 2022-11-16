@@ -129,7 +129,7 @@
               <div class="inner">
                 <h3>{{ $totalTeachers }}<sup style="font-size: 20px"></sup></h3>
 
-                <p>Bounce Rate</p>
+                <p>Teachers</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>
