@@ -78,3 +78,8 @@ Clone the repo and follow below steps.
 *Make sure you have run the command ` php artisan db:seed --class=UserSeeder` before you use these credentials.*
 **User:** admin@admin.com\
 **Password:** 123456
+
+## Contribution
+
+    1. Ajeesh KS
+    
