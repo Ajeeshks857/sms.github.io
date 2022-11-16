@@ -72,6 +72,7 @@ Clone the repo and follow below steps.
 4. Run `php artisan key:generate` to generate application key
 5. Run `php artisan migrate`
 6. Run ` php artisan db:seed --class=UserSeeder` to seed your database
+5. Run `php artisan serve`
 
 ### Demo Credentials
 ---
